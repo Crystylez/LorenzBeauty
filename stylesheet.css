@@ -1,0 +1,2108 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*-----------------Mobille version----------*/
+@media only screen and (max-width: 1000px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+    
+    
+   html, body{
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        overflow-x: hidden;
+        height: 100%;
+       
+        
+    }
+    
+    #wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
+    
+	
+	
+	h1{
+		font-family: 'Alex Brush', cursive;
+		font-size: 2em;
+	
+	}
+	
+	
+
+  /*-----------------Sørger for JQuery fade in effekten-------------------*/  
+  
+   div#wrapper { display: none; }
+	
+
+   
+  /*-----------------HEADER-------------------*/  
+	
+    .header{
+        display: block;
+        grid-column: 1 / 5;
+		grid-row: 1 / 2;
+        width: 100%;
+        -moz-box-shadow: 0px 2px 5px gray;
+        -webkit-box-shadow: 0px 2px 5px gray;
+	    box-shadow: 0px 2px 5px gray;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: white;
+    }
+    
+    
+    .logo{
+        display: block;
+        width: 250px;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 2%;
+    }
+    
+    
+	
+	/*----------------BURGER MENU----------------*/
+
+    #sidebarMenu {
+		position: absolute;
+        left: 0;
+		top: 0;
+        width: 200px;
+		z-index: 1;
+        transform: translateX(-250px);
+        transition: transform 250ms ease-in-out;
+        
+    }
+    .sidebarMenuInner{
+		
+        margin:0;
+        padding:0;
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        overflow:hidden;
+		height: 100vh;
+		border: medium;
+		background-color: #1e1e1e;
+		
+		
+		
+		
+		
+        
+    }
+	
+	
+	.sidebarMenuInner li span{
+        display: block;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.50);
+		
+    }
+    .sidebarMenuInner li a{
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+		
+        
+       
+    }
+	
+	
+
+	
+	
+    /*-------Burger Manu billede knapper. Skift billede under URL-------------*/
+    
+    .menutitlerforside{
+        grid-row: 1 / 2;
+         margin-top: auto;
+        margin-bottom: auto;
+        font-size: 1em;
+        color: white;
+        margin-left: 2%;
+		list-style: none;
+        height: 100%;
+		padding: 125px 0 0 0;
+        cursor: pointer;
+        background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/facial.jpg");
+		background-size: cover;
+		background-position: 30% 50%;
+		background-color: 1e1e1e;
+		
+		
+    }
+	
+	
+	    .menutitlerbehandlinger{
+        grid-row: 2 / 3;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 1em;
+        color: white;
+        margin-left: 2%;
+		list-style: none;
+        height: 100%;
+		padding: 125px 0 0 0;
+        cursor: pointer;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/ombre.jpg");
+		background-size: cover;
+		background-position: 20% 50%;
+			background-color: 1e1e1e;
+		
+    }
+	
+	
+	
+	    .menutitleromos{
+        grid-row: 3 / 4;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 1em;
+        color: white;
+        margin-left: 2%;
+		list-style: none;
+        height: 100%;
+		padding: 125px 0 0 0;
+        cursor: pointer;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/omosbillede.PNG");
+		background-size: cover;
+		background-position: 0% 10%;
+			background-color: 1e1e1e;
+		
+    }
+	
+	
+	
+	
+    
+    input[type="checkbox"]:checked ~ #sidebarMenu {
+        transform: translateX(0);
+    }
+
+    input[type=checkbox] {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: none;
+    }
+    .sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: absolute;
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+        top: 22px;
+        left: 15px;
+        height: 22px;
+        width: 22px;
+    
+    }
+    .spinner {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: #1e1e1e;
+    }
+    .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+    .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+		
+    }
+    .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+		
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+		
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+		background-color:white;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -9px;
+		background-color:white;
+    }
+    
+	
+	
+
+	/*---------------Gemmer desktop navigationsbaren i mobilversionen-----------------*/ 
+	
+	.navigationsbaren {
+		display: none;
+	}
+
+    
+    
+    
+    
+    
+   /*---------------FOOTER-----------------*/ 
+    footer{
+        display: block;
+        grid-column: 1 / 5;
+		
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+		position: sticky;
+        -moz-box-shadow: 0px -2px 5px gray;
+        -webkit-box-shadow: 0px -2px 5px gray;
+	    box-shadow: 0px -2px 5px gray;
+        background-color: white;
+    }
+	
+	
+	.footergrid {
+		display: grid;
+		grid-template-columns: 1fr 1fr -0.5fr;
+		grid-template-rows: auto 1fr auto;
+		padding: 16px;
+	}
+
+
+
+	.adresse{
+		grid-column: 1 / 2;
+		margin-right: 15px;
+	}
+
+
+	.åbningstider {
+		grid-column-start: 2;
+		grid-row: 1 / 1;
+	}
+
+
+	.some{
+		grid-column: 3 / 3;
+		padding-top: 10px;
+    	padding-left: 24px;
+	}
+
+
+
+
+
+
+
+    footer p{
+		font-size: 74%;
+		line-height: 10px;
+    }
+    
+    
+    .p2{
+        margin-top: 30px;
+    }
+    
+	
+	.some img{
+		width: 50px;
+		height: auto;
+		float: right;
+		margin-top: 2%;
+	}
+	
+    
+    
+    
+    /*-----------MAIN CONTENT--------------*/
+
+    
+    main{
+        grid-column: 1 / 5;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        margin-right: 10%;
+        margin-left: 10%;
+        margin-top: 5%;
+		
+        
+    }
+	
+	
+	.overskrift{
+		display: block;
+		text-align: center;
+		grid-column: 1 / 5;
+		margin: 0;
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+	
+	
+	/*-----------Forside----------*/
+    
+    /*---------video css----------------*/
+    video{
+        grid-column: 1 / 5;
+        position:relative;
+		width: 100%;
+        height: auto;  
+		margin-bottom: 5px;
+		margin-top: 20px;
+		box-shadow: 0 0 15px 1px gray;
+    }
+    
+  
+    
+    /*-------------Forside beskrivelse css-------------*/
+    
+    .beskrivelse{
+        grid-column: 1 / 5;
+		font-size: .8em;
+		margin-bottom: 30px;
+        
+    }
+	
+
+	/*-------------Styler velkommen overskriften----------------*/
+
+	.overskrift1 {
+		font-family: 'Alex Brush', cursive;
+		grid-column: 2 / 4;
+		text-align: center;
+	}
+	
+	
+
+	
+	/*-----------BOOK TID knap-------------*/
+	
+
+	.booktid{
+		background-color: white;
+		color: #1e1e1e;
+		grid-column: 2 / 4;
+		border: thin;
+		border-color: darkgray;
+		box-shadow: 0 0 15px 1px gray;
+		text-transform: uppercase;
+		font-size: 1.2em;
+		font-weight: 500;
+		margin-top: 60px;
+		margin-bottom: 23%;
+		padding: 3%;
+	}
+	
+	
+	
+
+	
+	/*------------Gemmer desktop versionen af book tid knappen på forsiden-------------*/
+
+	.booktiddesktop {
+		display: none;
+	}
+	
+	
+	/*------------Billede knapper af behandlinger på forsiden-------------*/
+
+	
+	
+	.behandlingsknapperforside{
+		grid-column: 1 / 5;
+		overflow: hidden;
+		margin-bottom: 5%;
+		
+	}
+	
+	.behandlingsknapperforside a{
+		text-decoration: none;
+	}
+	
+	.knap1{
+		display: block;
+		width: 100%;
+		height: 100px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.60), 
+		  rgba(0, 0, 0, 0.60)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	
+	
+	.knap2{
+		display: block;
+		width: 100%;
+		height: 100px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.60), 
+		  rgba(0, 0, 0, 0.60)),
+		  url("billeder/øjenvipper.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	
+	
+	.knap3{
+		display: block;
+		width: 100%;
+		height: 100px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.60), 
+		  rgba(0, 0, 0, 0.60)),
+		  url("billeder/hårextension.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	
+	
+	
+	.knap4{
+		display: block;
+		width: 100%;
+		height: 100px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.60), 
+		  rgba(0, 0, 0, 0.60)),
+		  url("billeder/eyebrow.jpg");
+		background-size: cover;
+		background-position: 0% 20%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	
+	
+	
+	.behandlingstext{
+		text-align: center;
+		vertical-align: middle;
+		color: white;
+		padding-top: 2%;
+		
+
+		
+	}
+	
+	.behandlingstext h2{
+		padding-top: 50px;
+	}
+	
+
+
+	/*-------------Styler anmeldelse overskriften----------------*/
+
+	.overskrift2 {
+		font-family: 'Alex Brush', cursive;
+		font-size: 40px;
+		grid-column: 1 / 5;
+		text-align: center;
+	}
+
+
+
+
+	/*-------------Gemmer Desktop Anmeldeserne på mobil versionen----------------*/
+
+	.anmeldelse1 {
+		display: none;
+	}
+
+	.anmeldelse2 {
+		display: none;
+	}
+
+	.anmeldelse3 {
+		display: none;
+	}
+
+	.anmeldelse4 {
+		display: none;
+	}
+
+
+
+
+
+
+	/*-------------Reviews del (Ikke færdig)----------------*/
+	
+	.reviews{
+		grid-column: 1 / 5;
+	}
+
+	.reviewsend{
+		grid-column: 1 / 5;
+		padding-bottom: 50px;
+	}
+	
+	
+	main iframe{
+		width: 100%;
+		height: auto;
+		padding-bottom: 2%;
+	}
+
+	
+	
+	
+	
+	/*------------Behandlinger side-------------*/
+	
+	
+	.behandlingstext p{
+		display: none;
+	}
+	
+	
+	
+	.behandlingsknapper{
+		grid-column: 1 / 5;
+		overflow: hidden;
+		margin-bottom: 20%;
+		display: grid;
+		grid-template-columns: 49% 2% 49%;
+		grid-template-rows: auto;
+		
+	}
+	
+	.behandlingsknapper a{
+		text-decoration: none;
+	}
+	
+	
+	.behandlingsknapper .overskrift{
+		margin-bottom: -2%;
+		margin-top: 10%;
+	}
+	
+	
+	
+	
+	
+	
+	/*------------Negle knapper-----------*/
+	.negle1{
+		display: block;
+		grid-column: 1 / 2;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/gele.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.negle2{
+		display: block;
+		grid-column: 3 / 4;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+		
+	}
+	
+	.negle3{
+		display: block;
+		grid-column: 1 / 2;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.negle4{
+		display: block;
+		grid-column: 3 / 4;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+
+	
+	/*------------Vipper knapper--------------*/
+	
+	.vipper1{
+		display: block;
+		grid-column: 1 / 2;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/singlelash.JPG");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.vipper2{
+		display: block;
+		grid-column: 3 / 4;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/volumelash.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.vipper3{
+		display: block;
+		grid-column: 1 / 2;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/lashlift.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.vipper4{
+		display: block;
+		grid-column: 3 / 4;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/flatlashes.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	/*------------Hår knapper--------------*/
+	
+	.permanent1{
+		display: block;
+		grid-column: 1 / 2;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/mix.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.permanent2{
+		display: block;
+		grid-column: 3 / 4;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/powerbrows.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.permanent3{
+		display: block;
+		grid-column: 1 / 2;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/microblading.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.permanent4{
+		display: block;
+		grid-column: 3 / 4;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/ombre.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	
+	
+	
+	/*------------Bryn knapper-------------*/
+	
+	.bryn1{
+		display: block;
+		grid-column: 1 / 2;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/facial.jpg");
+		background-size: cover;
+		background-position: 0% 20%;
+		margin-top: 5%;
+		
+	}
+	
+	.bryn2{
+		display: block;
+		grid-column: 3 / 4;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/eyebrowpluk.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.bryn3{
+		display: block;
+		grid-column: 1 / 2;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/voksben.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.bryn4{
+		display: block;
+		grid-column: 3 / 4;
+		height: 170px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/extensions.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.behandlingstext{
+		text-align: center;
+		vertical-align: middle;
+		color: white;
+		padding-top: 2%;
+		font-size: .7em;
+		
+
+		
+	}
+	
+	
+	
+	
+	/*------------Behandlings Side-------------*/
+	
+
+	/*------------Gemmer desktop billedet-------------*/
+
+	.behandlingsbillededesktop, .behandlingsbillededesktopansigt, .behandlingsbillededesktopgele, .behandlingsbillededesktoppluk, .behandlingsbillededesktopsinglelash, .behandlingsbillededesktoplashlift, .behandlingsbillededesktopflatlashes, .behandlingsbillededesktopombre, .behandlingsbillededesktoppower, .behandlingsbillededesktopmicroblading, .behandlingsbillededesktophybrid {
+		display: none;
+	}
+	
+	.behandlingsoverskrift{
+		grid-column: 1 / 5;
+		grid-row: 1 / 2;
+		
+	}
+	
+	
+	.behandlingsbillede{
+		height: 80px;
+		width: 100%;
+		box-shadow: 0 0 15px 2px #dfdfdf;
+		object-fit: cover;
+		
+		
+	}
+	
+	.behandlingsbilledepower{
+		height: 80px;
+		width: 100%;
+		box-shadow: 0 0 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 30%;
+	}
+	
+	
+	.behandlingsbilledemicroblading{
+		height: 80px;
+		width: 100%;
+		box-shadow: 0 0 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 20%;
+	}
+	
+	
+	.behandlingsbilledehybrid{
+		height: 80px;
+		width: 100%;
+		box-shadow: 0 0 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 30%;
+	}
+	
+	
+	
+	
+	.behandlingsnavn{
+		grid-column: 1 / 4;
+		grid-row: 4 / 5;
+		line-height: 95%;
+		margin-bottom: 20%;
+	}
+	
+	
+	.priser{
+		grid-column: 4 / 5;
+		grid-row: 4 / 5;
+		text-align: right;
+		line-height: 95%;
+	}
+	
+	
+
+	/*--------------Gemmer pris tabellen på mobil versionen------------------*/
+
+	.pristabelen {
+		display: none;
+	}
+	
+	
+
+	
+	/*--------------Om Os Side------------------*/
+	
+
+
+	
+	.behandlerbillede{
+		grid-column: 1 / 5;
+		grid-row: 2 / 3;
+		width: 100%;
+		height: auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		box-shadow: 0 0 15px 1px #dfdfdf;
+	}
+	
+	.beskrivelseomos{
+        grid-column: 1 / 5;
+		font-size: .8em;
+		margin-bottom: 80px;
+        
+    }
+	
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------Desktop version----------------*/
+@media only screen and (min-width: 1000px) {
+    
+    
+    
+    body{
+        font-family: 'Alex Brush', cursive;
+        font-family: 'Open Sans', sans-serif;
+        
+    }
+    
+    #wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    
+    
+	html, body{
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        overflow-x: hidden;
+        height: 100%;
+       
+        
+    }
+    
+    #wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
+    
+	
+	
+	h1{
+		font-family: 'Alex Brush', cursive;
+		font-size: 2em;
+	
+	}
+	
+	
+
+
+  /*-----------------Sørger for JQuery fade in effekten-------------------*/  
+
+	div#wrapper { display: none; }
+
+
+
+
+	
+  /*-----------------HEADER-------------------*/  
+	
+    .header{
+        display: block;
+        grid-column: 1 / 5;
+		grid-row: 1 / 2;
+        width: 100%;
+        -moz-box-shadow: 0px 2px 15px #dfdfdf;
+        -webkit-box-shadow: 0px 2px 15px #dfdfdf;
+	    box-shadow: 0px 2px 15px #dfdfdf;
+        top: 0;
+        z-index: 1;
+        background-color: white;
+    }
+    
+    
+    .logo{
+        display: block;
+        width: 250px;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 2%;
+    }
+    
+    
+	
+	/*----------------BURGER MENU----------------*/
+
+    #sidebarMenu {
+		display: none;
+	}
+	
+    .sidebarMenuInner{
+		display: none;
+    }
+	
+	
+	.sidebarMenuInner li span{
+		display: none;
+        
+    }
+    .sidebarMenuInner li a{
+		display: none;
+    }
+	
+	
+	
+	
+    /*-------Gemmer selve burger menuen for mobil-------------*/
+    
+
+    input[type=checkbox] {
+		display: none;
+	}
+	
+
+
+
+
+
+	/*-------Navigationsbaren-------------*/
+	
+	.navigationsbaren {
+		grid-column: 2 / 3;
+	}
+
+
+	.topnav {
+		display: grid;
+		box-shadow: 0 0 10px 1px #dfdfdf; 
+	  }
+	  
+	  
+	  .topnav a {
+		color: #1e1e1e;
+		text-decoration: none;
+		padding-top: 40px;
+		text-align: center;
+		font-size: 17px;
+		line-height: 30px;
+		margin: 80px;
+	
+	  }
+	
+	
+
+	  
+
+	/* Når du hover over en knap på Navigations baren så lyser den, den farve den er sat til */
+
+	a:hover {
+		color: palevioletred;
+		text-decoration: none;
+	}
+
+
+
+	/* Når du klikker på en knap på Navigations baren så lyser den et kort øjeblik, til den farve den er sat til */
+
+	a:active {
+	color:white;
+	text-decoration: none;
+	}
+
+
+
+	/* Er stregen under den fane du er inde i på siden */
+
+	.topnav a.active {
+	color: palevioletred;
+	text-decoration: none;
+	}
+
+
+
+
+
+
+
+	
+    
+    
+    
+    /*-----------MAIN CONTENT--------------*/
+
+    
+    main{
+        grid-column: 1 / 5;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        margin-right: 10%;
+        margin-left: 10%;
+		margin-top: 5%;
+		margin-bottom: 8%; 
+        
+    }
+	
+	
+	.overskrift{
+		display: block;
+		text-align: center;
+		grid-column: 1 / 5;
+		margin: 0;
+		margin-top: 30px;
+		margin-bottom: 40px;
+	}
+	
+	
+	/*-----------Forside----------*/
+    
+    /*---------video css----------------*/
+    video{
+		grid-column: 3 / 5;
+		grid-row: 1/ 3;
+        
+        position:relative;
+		box-shadow: 0 0 30px 5px #bfbfbf;
+   		left: 20%;
+		height: auto;
+		width: 70%;
+        
+       
+		
+    }
+	
+	/*-------------Forside beskrivelse css-------------*/
+	
+
+
+	.overskrift1 {
+		font-family: 'Alex Brush', cursive;
+		font-size: 30px;
+		grid-column: 1 / 3;
+		padding-right: 110px;
+	}
+	
+	
+    
+    .beskrivelse{
+		grid-column: 1 / 3;
+		padding-right: 26px;
+		margin-right: 50px;
+		padding-bottom: 50px;
+    }
+	
+	
+	/*-----------BOOK TID knap-------------*/
+	
+	.booktid{
+		display: none;
+	}
+
+
+	.booktiddesktop {
+		background-color: white;
+		color: #1e1e1e;
+		grid-column: 1 / 2;
+		border: thin;
+		border-color: darkgray;
+		box-shadow: 0 0 10px 1px #dfdfdf;
+		text-transform: uppercase;
+		font-size: 1.2em;
+		font-weight: 500;
+		margin-top: 60px;
+		margin-bottom: 23%;
+		margin-left: 35%;
+		padding: 3%;
+	}
+	
+	
+
+	/*-----------Anmeldelserne på desktop-------------*/
+
+	.overskrift2 {
+		font-family: 'Alex Brush', cursive;
+		font-size: 40px;
+		grid-column: 1 / 5;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.anmeldelse1 {
+		grid-column: 1 / 1;
+		margin: 20px;
+	}
+
+	.anmeldelse2 {
+		grid-column: 2 / 2;
+		margin: 20px;
+	}
+
+	.anmeldelse3 {
+		grid-column: 3 / 3;
+		margin: 20px;
+	}
+
+	.anmeldelse4 {
+		grid-column: 4 / 4;
+		margin: 20px;
+	}
+
+
+	
+	/*------------Billede knapper af behandlinger på forsiden-------------*/
+	
+	.behandlingsknapper .overskrift{
+		margin-bottom: -10px;
+		margin-top: 80px;
+	}
+	
+	
+	.behandlingsknapperforside{
+		display: none;
+		
+	}
+	
+	.behandlingsknapperforside a{
+		text-decoration: none;
+	}
+	
+	.knap1{
+		display: none;
+	}
+	
+	
+	.knap2{
+		display: none;
+	}
+	
+	
+	.knap3{
+		display: none;
+	}
+	
+	
+	
+	.knap4{
+		display: none;
+	}
+	
+	
+	
+	.behandlingstext{
+		text-align: center;
+		vertical-align: middle;
+		color: white;
+		padding-top: 2%;
+	}
+	
+	
+
+	/*-------------Reviews del (Ikke færdig)----------------*/
+	
+	.reviews{
+		display: none;
+	}
+	
+	
+
+	.reviewsend {
+		display: none;
+	}
+	
+	
+	
+	/*------------Behandlinger side-------------*/
+	
+	
+	
+	.behandlingsknapper{
+		grid-column: 1 / 5;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		
+	}
+	
+	.behandlingsknapper a{
+		text-decoration: none;
+	}
+	
+	
+	
+	.behandlingstext p{
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		padding-bottom: 0.5em;
+		font-size: .9em;
+	}
+	
+	
+	
+	/*------------Negle knapper-----------*/
+	.negle1{
+		display: block;
+		grid-column-start: 2;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/gele.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.negle2{
+		display: block;
+		grid-column-start: 3;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg") no-repeat;
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+	}
+	
+	.negle3{
+		display: block;
+		grid-column-start: 3;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.negle4{
+		display: block;
+		grid-column-start: 4;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+
+	
+	/*------------Vipper knapper--------------*/
+	
+	.vipper1{
+		display: block;
+		grid-column-start: 1;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/singlelash.JPG");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.vipper2{
+		display: block;
+		grid-column-start: 2;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/volumelash.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.vipper3{
+		display: block;
+		grid-column-start: 3;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/lashlift.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.vipper4{
+		display: block;
+		grid-column-start: 4;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/flatlashes.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	/*------------Hår knapper--------------*/
+	
+	.hår1{
+		display: block;
+		grid-column-start: 1;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.hår2{
+		display: block;
+		grid-column-start: 2;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.hår3{
+		display: block;
+		grid-column-start: 3;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.hår4{
+		display: block;
+		grid-column-start: 4;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	/*------------Bryn knapper-------------*/
+	
+	.bryn1{
+		display: block;
+		grid-column-start: 1;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/facial.jpg");
+		background-size: cover;
+		background-position: 0% 60%;
+		margin-top: 5%;
+		
+	}
+	
+	.bryn2{
+		display: block;
+		grid-column-start: 2;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/eyebrowpluk.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.bryn3{
+		display: block;
+		grid-column-start: 3;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/voksben.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.bryn4{
+		display: block;
+		grid-column-start: 4;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/extensions.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	
+/*----------------Permanent make-up knapper----------------*/
+	
+	.permanent1{
+		display: block;
+		grid-column-start: 1;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/mix.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.permanent2{
+		display: block;
+		grid-column-start: 2;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/powerbrows.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	.permanent3{
+		display: block;
+		grid-column-start: 3;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/microblading.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.permanent4{
+		display: block;
+		grid-column-start: 4;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/ombre.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	.permanent5{
+		display: block;
+		grid-column-start: 1;
+		margin: 10px;
+		height: 180px;
+		background: 
+		  linear-gradient(
+		  rgba(0, 0, 0, 0.80), 
+		  rgba(0, 0, 0, 0.80)),
+		  url("billeder/behandlinger1.jpg");
+		background-size: cover;
+		background-position: 0% 50%;
+		margin-top: 5%;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	.behandlingstext{
+		text-align: center;
+		vertical-align: middle;
+		color: white;
+		padding-top: 2%;
+		
+
+		
+	}
+	
+	
+	
+	/*-----------------------------------Behandlings Side----------------------------*/
+	
+	
+	.behandlingsoverskrift{
+		grid-column: 1 / 2;
+		
+	}
+
+
+	
+	/*---------------Pris tabellen for desktop versionen-----------------*/ 
+
+
+	.pristabelen {
+		grid-column: 3 / 5;
+	}
+
+
+
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		box-shadow: 0 0 15px 1px #dfdfdf;
+	  }
+	  
+	  td, th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+	  }
+	  
+	  tr:nth-child(even) {
+		background-color: white;
+	  }
+
+	/*---------------Gemmer priserne på mobil versionen-----------------*/ 
+
+	  .behandlingsnavn {
+		  display: none;
+	  }
+
+	  .priser {
+		  display: none;
+	  }
+	
+
+	
+	/*------------Styler coveret for desktop versionen-------------*/
+
+	.behandlingsbillededesktop{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 8px 1px #dfdfdf;
+		object-fit: cover;
+	}
+	
+	
+	.behandlingsbillededesktopansigt{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 60%;
+	}
+	
+	
+	.behandlingsbillededesktoppluk{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 45%;
+	}
+	
+	.behandlingsbillededesktopgele{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 18%;
+	}
+	
+	
+	.behandlingsbillededesktopsinglelash{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 60%;
+	}
+	
+	
+	.behandlingsbillededesktoplashlift{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 45%;
+	}
+	
+	
+	.behandlingsbillededesktopflatlashes{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 45%;
+	}
+	
+	.behandlingsbillededesktopombre{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 55%;
+	}
+
+	
+	.behandlingsbillededesktoppower{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 30%;
+	}
+	
+	
+	.behandlingsbillededesktopmicroblading{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 20%;
+	}
+	
+	
+	.behandlingsbillededesktophybrid{
+		grid-column: 1 / 5;
+		height: 170px;
+		width: 100%;
+		box-shadow: 0px 5px 15px 2px #dfdfdf;
+		object-fit: cover;
+		object-position: 0% 30%;
+	}
+
+	
+	
+	/*------------Gemmer mobil billede versionen-------------*/
+
+	.behandlingsbillede, .behandlingsbilledepower, .behandlingsbilledemicroblading, .behandlingsbilledehybrid{
+		display: none;
+	}
+	
+	
+	
+	
+	.behandlingsnavn{
+		grid-column: 1 / 3;
+		grid-row: 4 / 5;
+		line-height: 95%;
+		margin-bottom: 20%;
+	}
+	
+	
+	.priser{
+		grid-column: 4 / 5;
+		grid-row: 4 / 5;
+		text-align: right;
+		line-height: 95%;
+	}
+	
+	
+	
+	
+	
+	/*----------------------------------Om Os Side----------------------------*/
+	
+
+	
+
+	
+	.behandlerbillede{
+		grid-column: 1 / 3;
+		grid-row: 2 / 3;
+		width: 80%;
+		height: auto;
+		box-shadow: 0 0 15px 2px #bfbfbf;
+		margin-left: 15%;
+	}
+	
+	
+
+
+    .beskrivelseomos{
+        grid-column: 3 / 5;
+		font-size: .8em;
+		margin-left: 50px;
+    }
+
+
+
+
+
+
+
+   /*---------------FOOTER-----------------*/ 
+    footer{
+        display: block;
+        grid-column: 1 / 5;
+		
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        -moz-box-shadow: 0px -2px 5px #dfdfdf;
+        -webkit-box-shadow: 0px -2px 5px #dfdfdf;
+	    box-shadow: 0px -2px 5px #dfdfdf;
+        background-color: white;
+    }
+	
+	.footergrid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto 1fr auto;
+		padding: 20px;
+	}
+
+
+    .adresse{
+		padding: 2%;
+		grid-column: 1 / 2;
+	}
+
+	.åbningstider {
+		padding: 2%;
+		grid-column-start: 2;
+		grid-row: 1 / 1;
+	}
+
+
+
+    
+    footer p{
+        font-size: 0.9em;
+        line-height: .1em;
+		margin-left: 10%;
+
+    }
+    
+    
+    .p2{
+        margin-top: 30px;
+    }
+    
+	
+	.some img{
+		width: 50px;
+		height: auto;
+		float: right;
+		
+		
+	}
+	
+	.some{
+		grid-column: 3 / 5;
+		padding-right: 50px;
+		padding-top: 25px;
+	}
+}
